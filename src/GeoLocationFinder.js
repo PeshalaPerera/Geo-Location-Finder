@@ -1,17 +1,8 @@
 import { useEffect, useState } from "react";
-import './App.css';
+import './GeoLocationFinder.css';
 import greentick from "./greentick.jpg";
 import redcross from "./redcross.jpg";
-
-function Header() {
-  return (
-    <div>
-      <h1 className="header">
-        Geo Location Finder
-      </h1>
-    </div>
-  );
-}
+import {HiLocationMarker} from 'react-icons/hi';
 
 const GeoLocation = () => {
   const [data, setData] = useState();
@@ -53,7 +44,9 @@ const GeoLocation = () => {
   
   return (
     <div className="App">
-      <Header />
+      <h1>
+        <HiLocationMarker color={"green"}/>Geo Location Finder
+      </h1>
       <div>
         <input type="text" id="myInput" onChange={handleChange} placeholder="Enter your IP"/>
         {valid ? <p className="green" >Valid <img src={greentick} height={20} alt = "correct"/></p> : <p className="pink">You have entered an invalid IP address! <img src={redcross} height={20} alt = "incorrect"/></p>}

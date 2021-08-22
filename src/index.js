@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './GeoLocationFinder';
+import GeoLocationFinder from './GeoLocationFinder';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GeoLocationFinder />
   </React.StrictMode>,
   document.getElementById('root')
 );
